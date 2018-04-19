@@ -1,7 +1,7 @@
 # AutoOpinion
 * It is a program based on python3, selenium and PhantomJS
 * The program fills the NTU midterm feedback responses automatically
-* The program will ask you to enter `one response` and fills feedback responses for each class with the response you entered
+* The program will ask you to enter `one response` and fills the `feedback responses for each class` with the response you entered
 ## Usage
 * Before you execute the program, you should have installed `python3`, `npm`, `selenium` and `PhantomJS`
 * run
