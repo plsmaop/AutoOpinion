@@ -2,8 +2,10 @@
 * It is a program based on `python3`, `selenium` and `PhantomJS`
 * The program fills the NTU midterm feedback responses automatically
 * The program will ask you to enter `one response` and fills the `feedback responses for all your classes of this semester` with the response you have entered
+* MACOS ONLY
 ## Usage
 * Before you execute the program, you should have installed `python3`, `npm`, `selenium` and `PhantomJS`
+* open your command line and type the following commands
 * clone the repo and change the directory
   ```
   git clone https://github.com/plsmaop/AutoOpinion.git
