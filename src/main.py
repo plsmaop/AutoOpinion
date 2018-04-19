@@ -24,7 +24,7 @@ class AutoOpinion:
         password.clear()
         ID.send_keys(input('Please Enter Your Student ID: '))
         password.send_keys(getpass.getpass('Please Enter Your Password: '))
-        self.message = input('Please Enter Some Message: ')
+        self.message = input('Please Enter the Response You Want to Fill(responses for all classes will be the same): ')
         self.browser.find_element_by_name("Submit").click()
         while True:
             if (str(self.browser.title)).find('教學意見調查系統') != -1:
@@ -48,7 +48,7 @@ class AutoOpinion:
             yourCourses = self.browser.find_elements_by_xpath("//input[@type='radio']")
             select = self.browser.find_element_by_name("SubmitForm")
             course = yourCourses[courseIndex]
-            courseID = ("Course ID: "str(course.get_attribute("value")) + " DONE!!")
+            courseID = ("Course ID: " + str(course.get_attribute("value")) + " DONE!!")
             course.click()
             select.click()
             WebDriverWait(self.browser, 15).until(expected_conditions.url_changes(currentUrl))
