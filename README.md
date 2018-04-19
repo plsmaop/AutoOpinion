@@ -4,6 +4,11 @@
 * The program will ask you to enter `one response` and fills the `feedback responses for each class` with the response you entered
 ## Usage
 * Before you execute the program, you should have installed `python3`, `npm`, `selenium` and `PhantomJS`
+* clone the repo and change the directory
+```
+git clone https://github.com/plsmaop/AutoOpinion.git
+cd AutoOpinion
+```
 * run
   ```
   ./execute.sh
