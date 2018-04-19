@@ -49,8 +49,8 @@ class AutoOpinion:
             courseID = ("Course ID: " + str(course.get_attribute("value")) + " DONE!!")
             course.click()
             select.click()
-
             WebDriverWait(self.browser, 15).until(expected_conditions.url_changes(currentUrl))
+            
             newUrl = str(self.browser.current_url)
             self.browser.find_element_by_tag_name('textarea').send_keys(self.message)
             self.browser.find_element_by_xpath("//input[@type='Submit']").click()
