@@ -13,7 +13,7 @@
   ```
   ./execute.sh
   ```
-  to install selenium and PhantomJS, then the script will run the main program for you
+  to install `selenium` and `PhantomJS`, then the script will run the main program for you
 * or run 
   ```
   python3 ./src/main.py
@@ -22,3 +22,5 @@
 ## Warning
 * The program hasn't been tested thoroughly yet, so it may contains many bugs
 * I have no time to do the test
+
+## Issues are welcomed
