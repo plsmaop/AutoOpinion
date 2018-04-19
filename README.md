@@ -5,10 +5,10 @@
 ## Usage
 * Before you execute the program, you should have installed `python3`, `npm`, `selenium` and `PhantomJS`
 * clone the repo and change the directory
-```
-git clone https://github.com/plsmaop/AutoOpinion.git
-cd AutoOpinion
-```
+  ```
+  git clone https://github.com/plsmaop/AutoOpinion.git
+  cd AutoOpinion
+  ```
 * run
   ```
   ./execute.sh
