@@ -13,7 +13,6 @@ from selenium.webdriver.support import expected_conditions
 class AutoOpinion:
     def __init__(self):
         self.message = ''
-        self.wait = 0
         self.browser = webdriver.PhantomJS()
 
     def login(self):
@@ -37,33 +36,34 @@ class AutoOpinion:
     
     def fillOpinion(self):
         self.browser.find_element_by_name("submit").click()
-        currentUrl = str(self.browser.current_url)
         WebDriverWait(self.browser, 15).until(
             expected_conditions.title_contains('學期課程'))
             
         courseIndex = 0
         yourCourses = self.browser.find_elements_by_xpath("//input[@type='radio']")
         while courseIndex < len(yourCourses):
+            currentUrl = str(self.browser.current_url)
             yourCourses = self.browser.find_elements_by_xpath("//input[@type='radio']")
             select = self.browser.find_element_by_name("SubmitForm")
             course = yourCourses[courseIndex]
             courseID = ("Course ID: " + str(course.get_attribute("value")) + " DONE!!")
             course.click()
             select.click()
+
             WebDriverWait(self.browser, 15).until(expected_conditions.url_changes(currentUrl))
             newUrl = str(self.browser.current_url)
-            enterMessage = self.browser.find_element_by_tag_name('textarea')
-            enterMessage.send_keys(self.message)
+            self.browser.find_element_by_tag_name('textarea').send_keys(self.message)
             self.browser.find_element_by_xpath("//input[@type='Submit']").click()
             WebDriverWait(self.browser, 15).until(expected_conditions.url_changes(newUrl))
+            
             newUrl = str(self.browser.current_url)
             self.browser.find_element_by_xpath("//input[@type='submit']").click()
             WebDriverWait(self.browser, 15).until(expected_conditions.url_changes(newUrl))
+            
             courseIndex += 1
             print (courseID)
         print('ALL WORKS DONE!!')
-        self.browser.close()
-            
+        self.browser.close()  
 
 def main():
     if __name__ == '__main__':
@@ -72,5 +72,4 @@ def main():
         test.fillOpinion()
 
 main()
-        
         
