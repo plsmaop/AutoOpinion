@@ -38,7 +38,6 @@ class AutoOpinion:
     def fillOpinion(self):
         self.browser.find_element_by_name("submit").click()
         currentUrl = str(self.browser.current_url)
-        print(currentUrl)
         WebDriverWait(self.browser, 15).until(
             expected_conditions.title_contains('學期課程'))
             
