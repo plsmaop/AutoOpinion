@@ -51,14 +51,14 @@ class AutoOpinion:
             select.click()
             WebDriverWait(self.browser, 15).until(expected_conditions.url_changes(currentUrl))
             
-            newUrl = str(self.browser.current_url)
+            currentUrl = str(self.browser.current_url)
             self.browser.find_element_by_tag_name('textarea').send_keys(self.message)
             self.browser.find_element_by_xpath("//input[@type='Submit']").click()
-            WebDriverWait(self.browser, 15).until(expected_conditions.url_changes(newUrl))
+            WebDriverWait(self.browser, 15).until(expected_conditions.url_changes(currentUrl))
             
-            newUrl = str(self.browser.current_url)
+            currentUrl = str(self.browser.current_url)
             self.browser.find_element_by_xpath("//input[@type='submit']").click()
-            WebDriverWait(self.browser, 15).until(expected_conditions.url_changes(newUrl))
+            WebDriverWait(self.browser, 15).until(expected_conditions.url_changes(currentUrl))
             
             courseIndex += 1
             print (courseID)
