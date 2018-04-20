@@ -17,7 +17,13 @@ class AutoOpinion:
 
     def login(self):
         self.browser.get('https://investea.aca.ntu.edu.tw/aca_doc/midopin/midopinion.asp')
-        ID = self.browser.find_element_by_name("user")
+        print('=========================================================================================')
+        print('\n')
+        try:
+            ID = self.browser.find_element_by_name("user")
+        except:
+            print("The Server is Down, Please Try Again Later")
+            exit(1)
         password = self.browser.find_element_by_name("pass")
         ID.clear()
         password.clear()
