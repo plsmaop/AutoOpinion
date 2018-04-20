@@ -15,15 +15,22 @@ class AutoOpinion:
         self.message = ''
         self.browser = webdriver.PhantomJS()
 
+    def exit(self):
+        self.browser.close()  
+        print('\n')
+        print('=============================================================================================')
+    
     def login(self):
         self.browser.get('https://investea.aca.ntu.edu.tw/aca_doc/midopin/midopinion.asp')
-        print('=========================================================================================')
+        print('=============================================================================================')
         print('\n')
         try:
             ID = self.browser.find_element_by_name("user")
         except:
             print("The Server is Down, Please Try Again Later")
+            self.exit()
             exit(1)
+
         password = self.browser.find_element_by_name("pass")
         ID.clear()
         password.clear()
@@ -69,13 +76,13 @@ class AutoOpinion:
             courseIndex += 1
             print (courseID)
         print('ALL WORKS DONE!!')
-        self.browser.close()  
 
 def main():
     if __name__ == '__main__':
         test = AutoOpinion()
         test.login()
         test.fillOpinion()
+        test.exit()
 
 main()
         
