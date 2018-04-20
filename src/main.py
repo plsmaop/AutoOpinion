@@ -37,6 +37,7 @@ class AutoOpinion:
         ID.send_keys(input('Please Enter Your Student ID: '))
         password.send_keys(getpass.getpass('Please Enter Your Password: '))
         self.message = input('Please Enter the Response You Want to Fill(responses for all classes will be the same): ')
+        print('Waiting......')
         self.browser.find_element_by_name("Submit").click()
         while True:
             if (str(self.browser.title)).find('教學意見調查系統') != -1:
