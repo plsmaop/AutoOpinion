@@ -21,7 +21,7 @@ class AutoOpinion:
         print('=============================================================================================')
     
     def login(self):
-        self.browser.get('https://investea.aca.ntu.edu.tw/aca_doc/midopin/midopinion.asp')
+        self.browser.get('https://investea.aca.ntu.edu.tw/opinion/login.asp')
         print('=============================================================================================')
         print('\n')
         try:
