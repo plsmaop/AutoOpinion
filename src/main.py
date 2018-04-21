@@ -79,11 +79,11 @@ class AutoOpinion:
         print('ALL WORKS DONE!!')
 
 def main():
-    if __name__ == '__main__':
-        test = AutoOpinion()
-        test.login()
-        test.fillOpinion()
-        test.exit()
+    test = AutoOpinion()
+    test.login()
+    test.fillOpinion()
+    test.exit()
 
-main()
+if __name__ == '__main__':
+    main()
         
