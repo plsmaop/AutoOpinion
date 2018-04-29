@@ -22,7 +22,7 @@
   ```
   to execute the main program
 ## Warning
-* The program hasn't been tested thoroughly yet, so it may contains many bugs
+* The program hasn't been tested thoroughly yet, so it may contain many bugs
 * I have no time to do the test
 
 ## Issues are welcomed
