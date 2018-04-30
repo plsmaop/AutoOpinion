@@ -8,8 +8,8 @@
 * open your command line and type the following commands
 * clone the repo and change the directory
   ```
-  git clone https://github.com/plsmaop/AutoOpinion.git
-  cd AutoOpinion
+  git clone https://github.com/plsmaop/AutoSurvey.git
+  cd AutoSurvey
   ```
 * run
   ```
