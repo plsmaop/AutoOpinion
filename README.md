@@ -1,7 +1,7 @@
 # AutoSurvey
 * It is a program based on `python3`, `selenium` and `PhantomJS`
 * The program fills the NTU midterm feedback responses automatically
-* The program will ask you to enter `one response` and fill the `feedback responses for all your classes of this semester` with the response you have entered
+* The program will ask you to enter `one response` and fill the `feedback responses for all your courses of this semester` with the response you have entered
 * MACOS ONLY
 ## Usage
 * Before you execute the program, you should have installed `python3`, `npm`, `selenium` and `PhantomJS`
